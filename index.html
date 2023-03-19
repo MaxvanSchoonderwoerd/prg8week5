@@ -1,34 +1,28 @@
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <!-- Load three.js -->
-  <script defer src="https://unpkg.com/@tensorflow/tfjs-core@2.1.0/dist/tf-core.js"></script>
-  <script defer src="https://unpkg.com/@tensorflow/tfjs-converter@2.1.0/dist/tf-converter.js"></script>
-
-  <!-- GPU backend -->
-  <script defer src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@2.1.0/dist/tf-backend-webgl.js"></script>
-  <!-- CPU backend -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-cpu"></script> -->
-  <!-- WASM backend -->
-  <!-- <script src="https://unpkg.com/@tensorflow/tfjs-backend-wasm@2.1.0/dist/tf-backend-wasm.js"></script> -->
-
-  <script defer src="https://unpkg.com/@tensorflow-models/handpose@0.0.6/dist/handpose.js"></script>
-  <script defer src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
-  <script defer src="./src/index.js"></script>
-</head>
-
-<body>
-  <h1>HANDPOSE API met landmarks</h1>
-  <div id="container">
-    <canvas id="output"></canvas>
-    <video id="video" playsinline></video>
-  </div>
-  <h2>Landmarks array voor KNN ⬇️</h2>
-  <button id="btnTrainYT">Train a handpose for Youtube</button>
-  <button id="btnTrainGoogle">Train a handpose for Google</button>
-
-  <button id="btnClassify">Classify</button>
-
-  <div id="array">bla</div>
-</body>
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prg8 Week 5</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="https://unpkg.com/@tensorflow/tfjs-core@2.1.0/dist/tf-core.js"></script>
+    <script defer src="https://unpkg.com/@tensorflow/tfjs-converter@2.1.0/dist/tf-converter.js"></script>
+    <script defer src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@2.1.0/dist/tf-backend-webgl.js"></script>
+    <script defer src="https://unpkg.com/@tensorflow-models/handpose@0.0.6/dist/handpose.js"></script>
+    <script defer src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script defer src="./src/index.js"></script>
+  </head>
+  <body>
+    <h1>Pose Detection AI</h1>
+    <h2>Train deze AI om je handen te herkennen, en op basis daarvan youtube of google te openen</h2>
+    <div id="container">
+      <canvas id="output"></canvas>
+      <video id="video" playsinline></video>
+    </div>
+    <button id="btnTrainYT" class="button-18" role="button">Train een handpose voor Youtube</button>
+    <button id="btnTrainGoogle" class="button-18" role="button">Train een handpose voor Google</button>
+    <button id="btnClassify" class="button-18" role="button">Begin met detecteren</button>
+  </body>
+  <footer>Ontwikkeld door Max van Schoonderwoerd met tensorflow, tensorflow-models/handpose en ml5 KNN</footer>
+</html>
