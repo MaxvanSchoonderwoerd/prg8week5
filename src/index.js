@@ -2,8 +2,8 @@ let model;
 let videoWidth, videoHeight;
 let ctx, canvas;
 const log = document.querySelector("#array");
-const VIDEO_WIDTH = 400;
-const VIDEO_HEIGHT = 200;
+const VIDEO_WIDTH = 720;
+const VIDEO_HEIGHT = 405;
 const knnClassifier = ml5.KNNClassifier();
 
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
