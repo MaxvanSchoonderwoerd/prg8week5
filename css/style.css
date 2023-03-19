@@ -13,6 +13,11 @@ body {
   position: relative;
 }
 
+h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
 video {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
@@ -35,6 +40,13 @@ video {
   transform: translate(-50%, -50%);
   font-size: 2rem;
   z-index: -1;
+}
+
+.buttonContainer {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .button-18 {
@@ -85,8 +97,7 @@ video {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  font-size: 0.8rem;
   opacity: 0.5;
   padding: 0.5rem;
 }
