@@ -1,7 +1,6 @@
 let model;
 let videoWidth, videoHeight;
 let ctx, canvas;
-const log = document.querySelector("#array");
 const VIDEO_WIDTH = 600;
 const VIDEO_HEIGHT = 350;
 const knnClassifier = ml5.KNNClassifier();
@@ -107,7 +106,6 @@ function classify() {
   setInterval(() => {
     if (detectedPose) {
       knnClassifier.classify(resultsArray, (err, result) => {
-        console.log(result.label);
         window.open(result.label, "_blank");
       });
     }
